@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@200;300;400&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@200;300;400;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <style>
         :root {
             /* Nueva Paleta de Color: Lujo Orgánico Suizo */
@@ -16,9 +16,9 @@
             --accent-earth: #8B7E74;  /* Earthy Taupe */
             --accent-healing: #4A5D4E; /* Muted Sage */
             
-            /* Alturas reducidas un 40% */
-            --h-height-mobile: 92px;
-            --h-height-desktop: 119px;
+            /* Alturas reducidas un 20% adicional sobre el 40% previo (Total ~74px/95px) */
+            --h-height-mobile: 74px;
+            --h-height-desktop: 95px;
         }
 
         body {
@@ -94,9 +94,10 @@
         .burger-active #line2 { opacity: 0; }
         .burger-active #line3 { transform: translateY(-7px) rotate(-45deg); }
 
-        section[id], footer[id] { scroll-margin-top: var(--h-height-mobile); }
+        /* Ajuste de scroll margin: valores bajos para aterrizar PASADA la línea (Header - 50% Padding) */
+        section[id], footer[id] { scroll-margin-top: 34px; }
         @media (min-width: 768px) {
-            section[id], footer[id] { scroll-margin-top: var(--h-height-desktop); }
+            section[id], footer[id] { scroll-margin-top: 31px; }
         }
 
         /* Prevent potential horizontal shift on touch */
@@ -108,9 +109,11 @@
     <div class="layer-content relative min-h-screen">
         
         <header id="main-header" class="fixed top-0 z-[80] w-full transition-all duration-700 ease-in-out border-b border-transparent">
-            <div class="max-w-[1440px] mx-auto flex justify-between items-center px-6 md:px-24 py-7 md:py-12">
-                <a href="#" class="relative flex items-center h-full transition-transform duration-500 hover:scale-105">
-                    <span class="logo-font text-3xl md:text-4xl text-[#1A2421]">Blanca Massage</span>
+            <!-- Padding reducido para mantener el header un 20% más pequeño -->
+            <div class="max-w-[1440px] mx-auto flex justify-between items-center px-6 md:px-24 py-[22px] md:py-[38px]">
+                <a href="#" class="relative flex flex-col items-center leading-[0.8] transition-transform duration-500 hover:scale-[1.02]">
+                    <span class="text-xl md:text-2xl font-semibold tracking-[0.4em] uppercase text-[#1A2421]">Sense</span>
+                    <span class="text-[7px] md:text-[9px] font-light tracking-[0.75em] uppercase opacity-40 mt-2">Massages</span>
                 </a>
                 
                 <nav class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium items-center">
@@ -143,10 +146,10 @@
                     <!-- Text Content -->
                     <div class="z-20 text-[#1A2421] text-left order-2 lg:order-1">
                         <h1 class="serif text-4xl sm:text-5xl md:text-7xl font-light leading-tight mb-6 tracking-tight">
-                            Professional Massage <br class="hidden sm:block"> Therapy in Interlaken & Thun
+                            Massage <br class="hidden sm:block"> Therapy in Interlaken & Thun
                         </h1>
                         <p class="text-base md:text-xl font-light opacity-70 leading-relaxed max-w-2xl mb-10">
-                            Stop the pain and find your balance. Premium manual therapy designed to restore your body and mind in the heart of Switzerland.
+                            Stop the pain and find your balance. Therapy designed to restore your body and mind in the heart of Switzerland.
                         </p>
                         <div class="flex flex-col sm:flex-row justify-start items-center gap-4 w-full sm:w-auto">
                             <a href="#servizi" class="w-full sm:w-auto text-center text-[10px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-8 py-4 rounded-full hover:bg-[#4A5D4E] transition-all">View Treatments</a>
@@ -184,7 +187,7 @@
                         <div onclick="openModal('relaxing')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
                                 <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Total Recovery</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">Relaxing <br>Massage</h4>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Relaxing <br>Massage</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
                                     Perfect for melting away daily stress and calming your nervous system.
                                 </p>
@@ -198,8 +201,8 @@
                         <!-- Card 2 -->
                         <div onclick="openModal('sports')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
-                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-12 block font-medium">Performance</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">Sports & <br>Deep Tissue</h4>
+                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Performance</span>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Sports & <br>Deep Tissue</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
                                     Targeted therapy for active bodies to fix chronic tension and speed up recovery.
                                 </p>
@@ -213,8 +216,8 @@
                         <!-- Card 3 -->
                         <div onclick="openModal('healing')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
-                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-12 block font-medium">Holistic Care</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">Healing <br>Touch</h4>
+                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Holistic Care</span>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Healing <br>Touch</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
                                     A reconnection with your physical and emotional self through mindful touch.
                                 </p>
@@ -244,10 +247,10 @@
                             <p>Touch is an essential human need.</p>
                             <p>I’ve traveled to many countries, deepening my passion for the sacred art of touch and learning from different healing traditions along the way.</p>
                             <p>For the past 13 years, I’ve been dedicated to helping people feel more at ease, relaxed, and connected in their bodies. My work integrates knowledge from physiotherapy, Swedish massage, lymphatic drainage, Thai massage, yoga, deep tissue techniques, and tantric body awareness.</p>
-                            <p>In every session, I bring not only technique, but also presence, care, and deep listening — meeting your body where it is and supporting its natural process of release and balance</p>
+                            <p>In every session, I bring not only technique, but also presence, care, and deep listening — meeting your body where it is and supporting its natural process of release and balance.</p>
                         </div>
-                        <div class="pt-10">
-                            <div class="w-12 h-px bg-[#8B7E74]/30 mb-8"></div>
+                        <div class="pt-6">
+                            <div class="w-12 h-px bg-[#8B7E74]/30 mb-6"></div>
                             <p class="serif text-2xl md:text-3xl font-light italic opacity-90">"Well-being is a journey <br> Thank you for sharing it with me"</p>
                             <p class="text-[11px] uppercase tracking-[0.3em] font-medium mt-4">Blanca — Holistic Therapist</p>
                         </div>
@@ -344,7 +347,7 @@
                     
                     <div class="mt-10 pt-8 border-t border-[#8B7E74]/10 flex flex-col items-center gap-2">
                         <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Session</span>
-                        <span class="serif text-3xl italic text-[#8B7E74]">60 Min — 99.-</span>
+                        <span class="serif text-3xl italic text-[#8B7E74]">60 Min — CHF 99.-</span>
                     </div>
 
                     <div class="mt-10 pt-8 flex justify-center">
@@ -449,7 +452,10 @@
                 e.preventDefault();
 
                 const start = window.pageYOffset;
-                const headerH = window.innerWidth >= 768 ? 119 : 92;
+                /* headerH AJUSTADO: Se reduce el offset para que el scroll supere la línea 
+                   y se detenga a mitad de camino hacia el texto (Header - 50% Padding).
+                */
+                const headerH = window.innerWidth >= 768 ? 31 : 34;
                 let targetY = 0;
 
                 const target = document.querySelector(targetId);
