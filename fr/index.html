@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massage in Interlaken & Thun | Sense Massage</title>
-    <meta name="description" content="Professional massage in Interlaken & Thun. Sports massage, deep tissue and relaxing treatments to relieve pain, reduce stress and restore balance.">
+    <title>Massage à Interlaken et Thoune | Sense Massage</title>
+    <meta name="description" content="Massage professionnel à Interlaken et Thoune. Massage sportif, tissus profonds et soins relaxants pour soulager la douleur, réduire le stress et rétablir l'équilibre.">
     
     <!-- SEO Technical -->
-    <link rel="canonical" href="https://blanca-masages.vercel.app/">
-    <link rel="alternate" hreflang="en" href="https://blanca-masages.vercel.app/">
+    <link rel="canonical" href="https://blanca-masages.vercel.app/fr/index.html">
+    <link rel="alternate" hreflang="en" href="https://blanca-masages.vercel.app/en/index.html">
+    <link rel="alternate" hreflang="es" href="https://blanca-masages.vercel.app/es/index.html">
+    <link rel="alternate" hreflang="fr" href="https://blanca-masages.vercel.app/fr/index.html">
+    <link rel="alternate" hreflang="de" href="https://blanca-masages.vercel.app/de/index.html">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -17,8 +20,8 @@
       "@type": "HealthAndBeautyBusiness",
       "name": "Blanca Massage",
       "image": "https://blanca-masages.vercel.app/assets/masaje-2.jpg",
-      "@id": "https://blanca-masages.vercel.app/",
-      "url": "https://blanca-masages.vercel.app/",
+      "@id": "https://blanca-masages.vercel.app/fr/index.html",
+      "url": "https://blanca-masages.vercel.app/fr/index.html",
       "telephone": "+41772289355",
       "address": {
         "@type": "PostalAddress",
@@ -47,7 +50,7 @@
         "closes": "20:00"
       },
       "sameAs": [
-        "https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%27d%20like%20to%20know%20more%20about%20your%20massage%20sessions."
+        "https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20Je%20souhaiterais%20en%20savoir%20plus%20sur%20vos%20s%C3%A9ances%20de%20massage."
       ]
     }
     </script>
@@ -58,13 +61,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@200;300;400;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Nueva Paleta de Color: Lujo Orgánico Suizo */
-            --bg-color: #F7F3F0;       /* Linen Mist */
-            --text-main: #1A2421;     /* Deep Forest Charcoal */
-            --accent-earth: #8B7E74;  /* Earthy Taupe */
-            --accent-healing: #4A5D4E; /* Muted Sage */
-            
-            /* Alturas reducidas un 20% adicional sobre el 40% previo (Total ~74px/95px) */
+            --bg-color: #F7F3F0;
+            --text-main: #1A2421;
+            --accent-earth: #8B7E74;
+            --accent-healing: #4A5D4E;
             --h-height-mobile: 74px;
             --h-height-desktop: 95px;
         }
@@ -109,7 +109,6 @@
         
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        /* Scrollbar personalizada */
         ::-webkit-scrollbar-thumb { 
             background: var(--accent-earth); 
             border-radius: 10px; 
@@ -142,13 +141,11 @@
         .burger-active #line2 { opacity: 0; }
         .burger-active #line3 { transform: translateY(-7px) rotate(-45deg); }
 
-        /* Scroll margin: Ajustado para aterrizar exactamente en el medio visual */
         section[id], footer[id] { scroll-margin-top: 34px; }
         @media (min-width: 768px) {
             section[id], footer[id] { scroll-margin-top: 31px; }
         }
 
-        /* Prevent potential horizontal shift on touch */
         * { touch-action: manipulation; }
     </style>
 </head>
@@ -164,9 +161,9 @@
                 </a>
                 
                 <nav class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] opacity-60 font-medium items-center">
-                    <a href="#servizi" class="hover:opacity-100 transition-opacity duration-500">Treatments</a>
-                    <a href="#storia" class="hover:opacity-100 transition-opacity duration-500">Meet Blanca</a>
-                    <a href="#contatti" class="hover:opacity-100 transition-opacity duration-500">Book Your Session</a>
+                    <a href="#servizi" class="hover:opacity-100 transition-opacity duration-500">Soins</a>
+                    <a href="#storia" class="hover:opacity-100 transition-opacity duration-500">Rencontrez Blanca</a>
+                    <a href="#contatti" class="hover:opacity-100 transition-opacity duration-500">Réservez votre séance</a>
                 </nav>
 
                 <button id="burger-btn" onclick="toggleMobileMenu()" class="md:hidden flex flex-col space-y-1.5 z-[90] p-2">
@@ -180,22 +177,22 @@
         <div id="mobile-menu" class="fixed inset-0 z-[70] opacity-0 pointer-events-none transition-all duration-1000 bg-[#F7F3F0]/95 backdrop-blur-xl flex flex-col items-center justify-between py-16">
             <div class="h-10"></div>
             <nav class="relative z-10 flex flex-col items-center space-y-10 text-[11px] uppercase tracking-[0.4em] font-medium opacity-80">
-                <a href="#servizi" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Treatments</a>
-                <a href="#storia" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Meet Blanca</a>
-                <a href="#contatti" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Book Your Session</a>
+                <a href="#servizi" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Soins</a>
+                <a href="#storia" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Rencontrez Blanca</a>
+                <a href="#contatti" onclick="toggleMobileMenu()" class="hover:opacity-100 transition-opacity duration-500">Réservez votre séance</a>
             </nav>
             <div class="flex items-center space-x-3 bg-white/40 backdrop-blur-md p-2 rounded-full border border-white/20">
-                <a href="/" title="English" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                    <img src="https://flagcdn.com/gb.svg" alt="English Language Selector" class="w-full h-full object-cover">
+                <a href="/en/index.html" title="English" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                    <img src="https://flagcdn.com/gb.svg" alt="Sélecteur de langue anglais" class="w-full h-full object-cover">
                 </a>
-                <a href="/fr" title="Français" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                    <img src="https://flagcdn.com/fr.svg" alt="French Language Selector" class="w-full h-full object-cover">
+                <a href="/fr/index.html" title="Français" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                    <img src="https://flagcdn.com/fr.svg" alt="Sélecteur de langue français" class="w-full h-full object-cover">
                 </a>
-                <a href="/de" title="Deutsch" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                    <img src="https://flagcdn.com/de.svg" alt="German Language Selector" class="w-full h-full object-cover">
+                <a href="/de/index.html" title="Deutsch" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                    <img src="https://flagcdn.com/de.svg" alt="Sélecteur de langue allemand" class="w-full h-full object-cover">
                 </a>
-                <a href="/es" title="Español" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                    <img src="https://flagcdn.com/es.svg" alt="Spanish Language Selector" class="w-full h-full object-cover">
+                <a href="/es/index.html" title="Español" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                    <img src="https://flagcdn.com/es.svg" alt="Sélecteur de langue espagnol" class="w-full h-full object-cover">
                 </a>
             </div>
         </div>
@@ -206,20 +203,20 @@
                     <!-- Text Content -->
                     <div class="z-20 text-[#1A2421] text-left order-2 lg:order-1">
                         <h1 class="serif text-4xl sm:text-5xl md:text-7xl font-light leading-tight mb-6 tracking-tight">
-                            Massage <br class="hidden sm:block"> Therapy in Interlaken & Thun
+                            Massothérapie <br class="hidden sm:block"> à Interlaken et Thoune
                         </h1>
                         <p class="text-base md:text-xl font-light opacity-70 leading-relaxed max-w-2xl mb-10">
-                            Stop the pain and find your balance. Therapy designed to restore your body and mind in the heart of Switzerland.
+                            Libérez les tensions et retrouvez votre équilibre. Une thérapie conçue pour restaurer le corps et l'esprit au cœur de la Suisse.
                         </p>
                         <div class="flex flex-col sm:flex-row justify-start items-center gap-4 w-full sm:w-auto">
-                            <a href="#servizi" class="w-full sm:w-auto text-center text-[10px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-8 py-4 rounded-full hover:bg-[#4A5D4E] transition-all">View Treatments</a>
-                            <a href="#contatti" class="w-full sm:w-auto text-center text-[10px] uppercase tracking-[0.3em] border border-[#1A2421] text-[#1A2421] px-8 py-4 rounded-full hover:bg-[#1A2421] hover:text-white transition-all">Book Now</a>
+                            <a href="#servizi" class="w-full sm:w-auto text-center text-[10px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-8 py-4 rounded-full hover:bg-[#4A5D4E] transition-all">Voir les Soins</a>
+                            <a href="#contatti" class="w-full sm:w-auto text-center text-[10px] uppercase tracking-[0.3em] border border-[#1A2421] text-[#1A2421] px-8 py-4 rounded-full hover:bg-[#1A2421] hover:text-white transition-all">Réserver</a>
                         </div>
                     </div>
                     <!-- Image Content -->
                     <div class="order-1 lg:order-2 w-full flex items-center justify-center">
                         <div class="relative w-full max-w-[600px] lg:max-w-none aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
-                            <img src="https://blanca-masages.vercel.app/assets/masaje-2.jpg" alt="Professional Massage Therapy session in Interlaken - Blanca Massage" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
+                            <img src="https://blanca-masages.vercel.app/assets/masaje-2.jpg" alt="Séance de massothérapie professionnelle à Interlaken - Blanca Massage" class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105">
                         </div>
                     </div>
                 </div>
@@ -227,17 +224,16 @@
 
             <div class="w-[70%] mx-auto border-t border-[#8B7E74]/20"></div>
 
-            <!-- SECCIÓN SERVICIOS -->
             <section id="servizi" class="py-20 md:py-32 px-6 md:px-24 bg-[var(--bg-color)]">
                 <div class="max-w-[1440px] mx-auto">
                     
                     <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
                         <div class="max-w-xl">
-                            <span class="text-[10px] uppercase tracking-[0.6em] opacity-40 mb-4 block">Core Menu</span>
-                            <h2 class="serif text-5xl md:text-8xl font-light leading-none">The <span class="italic">Treatments.</span></h2>
+                            <span class="text-[10px] uppercase tracking-[0.6em] opacity-40 mb-4 block">Menu des Soins</span>
+                            <h2 class="serif text-5xl md:text-8xl font-light leading-none">Les <span class="italic">Traitements.</span></h2>
                         </div>
                         <p class="text-sm md:text-base font-light opacity-60 max-w-xs pb-2">
-                            Three specialized paths designed to restore your natural state of balance.
+                            Trois parcours spécialisés conçus pour restaurer votre état naturel d'équilibre.
                         </p>
                     </div>
 
@@ -246,14 +242,14 @@
                         <!-- Card 1 -->
                         <div onclick="openModal('relaxing')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
-                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Total Recovery</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Relaxing <br>Massage</h4>
+                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Récupération Totale</span>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Massage <br>Relaxant</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
-                                    Perfect for melting away daily stress and calming your nervous system.
+                                    Idéal pour dissiper le stress quotidien et apaiser votre système nerveux.
                                 </p>
                             </div>
                             <div class="flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold mt-10">
-                                <span>SEE MORE DETAILS</span>
+                                <span>VOIR LES DÉTAILS</span>
                                 <span class="w-12 h-px bg-[var(--text-main)] transition-all duration-500"></span>
                             </div>
                         </div>
@@ -262,13 +258,13 @@
                         <div onclick="openModal('sports')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
                                 <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Performance</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Sports & <br>Deep Tissue</h4>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Sportif et <br>Tissus Profonds</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
-                                    Targeted therapy for active bodies to fix chronic tension and speed up recovery.
+                                    Thérapie ciblée pour les corps actifs afin de libérer les tensions chroniques et accélérer la récupération.
                                 </p>
                             </div>
                             <div class="flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold mt-10">
-                                <span>SEE MORE DETAILS</span>
+                                <span>VOIR LES DÉTAILS</span>
                                 <span class="w-12 h-px bg-[var(--text-main)] transition-all duration-500"></span>
                             </div>
                         </div>
@@ -276,14 +272,14 @@
                         <!-- Card 3 -->
                         <div onclick="openModal('healing')" class="group bg-white rounded-[2rem] p-8 md:p-12 flex flex-col justify-between min-h-[420px] md:min-h-[480px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(26,36,33,0.08)] cursor-pointer">
                             <div>
-                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Holistic Care</span>
-                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Healing <br>Touch</h4>
+                                <span class="text-[10px] uppercase tracking-[0.4em] text-[var(--accent-earth)] mb-8 md:mb-12 block font-medium">Soin Holistique</span>
+                                <h4 class="serif text-3xl md:text-5xl mb-6 md:mb-8 leading-tight flex items-center h-24 md:h-40">Toucher <br>Guérisseur</h4>
                                 <p class="text-base font-light opacity-60 leading-relaxed">
-                                    A reconnection with your physical and emotional self through mindful touch.
+                                    Une reconnexion avec votre être physique et émotionnel par le toucher conscient.
                                 </p>
                             </div>
                             <div class="flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] font-semibold mt-10">
-                                <span>SEE MORE DETAILS</span>
+                                <span>VOIR LES DÉTAILS</span>
                                 <span class="w-12 h-px bg-[var(--text-main)] transition-all duration-500"></span>
                             </div>
                         </div>
@@ -298,25 +294,25 @@
                 <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center md:items-center justify-center gap-12 md:gap-16">
                     <div class="space-y-8 max-w-xl order-2 md:order-1">
                         <div>
-                            <span class="text-[10px] uppercase tracking-[0.5em] opacity-40 mb-3 block">Meet Blanca</span>
+                            <span class="text-[10px] uppercase tracking-[0.5em] opacity-40 mb-3 block">Rencontrez Blanca</span>
                             <h2 class="serif text-5xl md:text-6xl font-light leading-tight">
-                                Dedicated to the <br> <span class="italic">Art of Healing.</span>
+                                Dédiée à <br> <span class="italic">l'Art de la Guérison.</span>
                             </h2>
                         </div>
                         <div class="space-y-6 font-light text-base md:text-xl opacity-70 leading-relaxed">
-                            <p>Touch is an essential human need.</p>
-                            <p>I’ve traveled to many countries, deepening my passion for the sacred art of touch and learning from different healing traditions along the way.</p>
-                            <p>For the past 13 years, I’ve been dedicated to helping people feel more at ease, relaxed, and connected in their bodies. My work integrates knowledge from physiotherapy, Swedish massage, lymphatic drainage, Thai massage, yoga, deep tissue techniques, and tantric body awareness.</p>
-                            <p>In every session, I bring not only technique, but also presence, care, and deep listening — meeting your body where it is and supporting its natural process of release and balance.</p>
+                            <p>Le toucher est un besoin humain fondamental.</p>
+                            <p>J'ai voyagé dans de nombreux pays, approfondissant ma passion pour l'art sacré du toucher et apprenant de différentes traditions de guérison en chemin.</p>
+                            <p>Depuis 13 ans, je me consacre à aider les gens à se sentir plus à l'aise, détendus et connectés à leur corps. Mon travail intègre des connaissances en physiothérapie, massage suédois, drainage lymphatique, massage thaï, yoga, techniques de tissus profonds et conscience corporelle tantrique.</p>
+                            <p>À chaque séance, j'apporte non seulement la technique, mais aussi la présence, la bienveillance et une écoute profonde — en rencontrant votre corps là où il en est pour soutenir son processus naturel de libération et d'équilibre.</p>
                         </div>
                         <div class="pt-6">
                             <div class="w-12 h-px bg-[#8B7E74]/30 mb-6"></div>
-                            <p class="serif text-2xl md:text-3xl font-light italic opacity-90">"Well-being is a journey <br> Thank you for sharing it with me"</p>
-                            <p class="text-[11px] uppercase tracking-[0.3em] font-medium mt-4">Blanca — Holistic Therapist</p>
+                            <p class="serif text-2xl md:text-3xl font-light italic opacity-90">"Le bien-être est un voyage <br> Merci de le partager avec moi"</p>
+                            <p class="text-[11px] uppercase tracking-[0.3em] font-medium mt-4">Blanca — Thérapeute Holistique</p>
                         </div>
                     </div>
                     <div class="relative flex-shrink-0 order-1 md:order-2 w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px]">
-                        <img src="https://blanca-masages.vercel.app/assets/blanca.jpg" alt="Blanca - Holistic Therapist in Interlaken and Thun" class="w-full aspect-square object-cover rounded-[2rem] rounded-tl-[5rem] rounded-br-[5rem] shadow-sm" referrerPolicy="no-referrer" loading="lazy">
+                        <img src="https://blanca-masages.vercel.app/assets/blanca.jpg" alt="Blanca - Thérapeute holistique à Interlaken et Thoune" class="w-full aspect-square object-cover rounded-[2rem] rounded-tl-[5rem] rounded-br-[5rem] shadow-sm" referrerPolicy="no-referrer" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -327,14 +323,14 @@
                 <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-center gap-16 md:gap-20">
                     <div class="space-y-10 max-w-xl w-full">
                         <div>
-                            <span class="text-[10px] uppercase tracking-[0.5em] opacity-40 mb-3 block">Book Your Session</span>
-                            <h2 class="serif text-5xl md:text-6xl font-light leading-tight">Ready to <br><span class="italic">Feel Better?</span></h2>
-                            <p class="text-base md:text-xl font-light opacity-70 mt-4 leading-relaxed">Sessions are available in Interlaken and Thun. Secure your spot now.</p>
+                            <span class="text-[10px] uppercase tracking-[0.5em] opacity-40 mb-3 block">Réservez votre séance</span>
+                            <h2 class="serif text-5xl md:text-6xl font-light leading-tight">Prêt à <br><span class="italic">vous sentir mieux ?</span></h2>
+                            <p class="text-base md:text-xl font-light opacity-70 mt-4 leading-relaxed">Séances disponibles à Interlaken et Thoune. Réservez votre créneau dès maintenant.</p>
                         </div>
                         <div class="space-y-6 md:space-y-8 text-base md:text-xl font-light opacity-70">
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                                 <span class="text-[10px] uppercase tracking-widest opacity-60 w-28 font-medium">WhatsApp</span>
-                                <a href="https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%27d%20like%20to%20book%20a%20massage%20session.%20Please%20let%20me%20know%20your%20availability." target="_blank" class="hover:opacity-100 transition-opacity font-medium">+41 77 228 93 55</a>
+                                <a href="https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20J%27ai%20vu%20votre%20site%20et%20je%20souhaiterais%20r%C3%A9server%20une%20s%C3%A9ance%20de%20massage.%20Merci%20de%20m%27indiquer%20vos%20disponibilit%C3%A9s." target="_blank" class="hover:opacity-100 transition-opacity font-medium">+41 77 228 93 55</a>
                             </div>
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                                 <span class="text-[10px] uppercase tracking-widest opacity-60 w-28 font-medium">Email</span>
@@ -342,20 +338,20 @@
                             </div>
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                                 <span class="text-[10px] uppercase tracking-widest opacity-60 w-28 font-medium">Interlaken</span>
-                                <span class="font-medium">Main Studio</span>
+                                <span class="font-medium">Studio Principal</span>
                             </div>
                             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
-                                <span class="text-[10px] uppercase tracking-widest opacity-60 w-28 font-medium">Thun</span>
-                                <span class="font-medium">By Appointment</span>
+                                <span class="text-[10px] uppercase tracking-widest opacity-60 w-28 font-medium">Thoune</span>
+                                <span class="font-medium">Sur rendez-vous</span>
                             </div>
                         </div>
                         <div class="pt-6">
-                            <a href="https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%20found%20your%20website%20and%20I%27d%20like%20to%20book%20a%20session.%20Please%20let%20me%20know%20your%20availability." target="_blank" class="block sm:inline-block text-center text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all shadow-xl">Book Your Session</a>
+                            <a href="https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20J%27ai%20vu%20votre%20site%20et%20je%20souhaiterais%20r%C3%A9server%20une%20s%C3%A9ance.%20Merci%20de%20m%27indiquer%20vos%20disponibilit%C3%A9s." target="_blank" class="block sm:inline-block text-center text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all shadow-xl">Prendre rendez-vous</a>
                         </div>
                     </div>
                     <div class="relative flex-shrink-0 w-full max-w-[480px]">
                         <div class="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10947.495323674213!2d7.8621099999999995!3d46.6884911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fa5c89dcc4c81%3A0xa134755fb2dd4900!2sMassage%20sense!5e0!3m2!1ses-419!2sch!4v1776945836578!5m2!1ses-419!2sch" width="100%" height="100%" style="border:0;" allowfullscreen="" title="Massage Sense Location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10947.495323674213!2d7.8621099999999995!3d46.6884911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478fa5c89dcc4c81%3A0xa134755fb2dd4900!2sMassage%20sense!5e0!3m2!1ses-419!2sch!4v1776945836578!5m2!1ses-419!2sch" width="100%" height="100%" style="border:0;" allowfullscreen="" title="Localisation de Massage Sense" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -363,22 +359,22 @@
         </main>
 
         <footer class="py-12 px-6 md:px-24 border-t border-[#8B7E74]/20 text-center">
-            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Website by <a href="https://vistozzo.co" target="_blank" class="hover:opacity-100 transition-opacity">Vistozzo.co</a></p>
+            <p class="text-[10px] uppercase tracking-[0.3em] opacity-40">Site web par <a href="https://vistozzo.co" target="_blank" class="hover:opacity-100 transition-opacity">Vistozzo.co</a></p>
         </footer>
 
-        <!-- Language Selector (Desktop posicionado a la derecha) -->
+        <!-- Language Selector -->
         <div class="hidden md:flex fixed bottom-6 right-6 md:right-24 z-[60] items-center space-x-3 bg-white/40 backdrop-blur-md p-2 rounded-full border border-white/20">
-            <a href="/" title="English" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                <img src="https://flagcdn.com/gb.svg" alt="English Language Selector" class="w-full h-full object-cover">
+            <a href="/en/index.html" title="English" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                <img src="https://flagcdn.com/gb.svg" alt="Anglais" class="w-full h-full object-cover">
             </a>
-            <a href="/fr" title="Français" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                <img src="https://flagcdn.com/fr.svg" alt="French Language Selector" class="w-full h-full object-cover">
+            <a href="/fr/index.html" title="Français" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                <img src="https://flagcdn.com/fr.svg" alt="Français" class="w-full h-full object-cover">
             </a>
-            <a href="/de" title="Deutsch" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                <img src="https://flagcdn.com/de.svg" alt="German Language Selector" class="w-full h-full object-cover">
+            <a href="/de/index.html" title="Deutsch" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                <img src="https://flagcdn.com/de.svg" alt="Allemand" class="w-full h-full object-cover">
             </a>
-            <a href="/es" title="Español" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
-                <img src="https://flagcdn.com/es.svg" alt="Spanish Language Selector" class="w-full h-full object-cover">
+            <a href="/es/index.html" title="Español" class="w-6 h-6 rounded-full overflow-hidden hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+                <img src="https://flagcdn.com/es.svg" alt="Espagnol" class="w-full h-full object-cover">
             </a>
         </div>
     </div>
@@ -392,25 +388,25 @@
                     <svg class="w-6 h-6 text-[#1A2421] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="relative z-10 mt-4 sm:mt-0 text-center">
-                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Relaxing Massage</h2>
+                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Massage Relaxant</h2>
                     <div class="space-y-6 font-light text-base md:text-xl opacity-70 leading-relaxed text-[#1A2421]">
-                        <p>Uses light to medium pressure to relax the body and mind and improve circulation.</p>
-                        <p class="font-semibold text-[#1A2421]">Helps to:</p>
+                        <p>Utilise une pression légère à modérée pour détendre le corps et l'esprit tout en améliorant la circulation.</p>
+                        <p class="font-semibold text-[#1A2421]">Aide à :</p>
                         <ul class="list-disc inline-block text-left pl-6 space-y-2">
-                            <li>reduce stress and anxiety</li>
-                            <li>improve sleep quality</li>
-                            <li>release light tension and restore well-being</li>
+                            <li>réduire le stress et l'anxiété</li>
+                            <li>améliorer la qualité du sommeil</li>
+                            <li>libérer les tensions légères et restaurer le bien-être</li>
                         </ul>
-                        <p class="italic text-[#1A2421]/60">💡 Perfect for those seeking deep rest and inner calm.</p>
+                        <p class="italic text-[#1A2421]/60">💡 Parfait pour ceux qui recherchent un repos profond et une paix intérieure.</p>
                     </div>
                     
                     <div class="mt-10 pt-8 border-t border-[#8B7E74]/10 flex flex-col items-center gap-2">
-                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Session</span>
+                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Séance</span>
                         <span class="serif text-3xl italic text-[#8B7E74]">60 Min — CHF 99.-</span>
                     </div>
 
                     <div class="mt-10 pt-8 flex justify-center">
-                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%27d%20like%20to%20book%20a%20Relaxing%20Massage%20session.%20Please%20let%20me%20know%20your%20availability." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Book This Treatment</a>
+                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20Je%20souhaiterais%20r%C3%A9server%20un%20Massage%20Relaxant.%20Merci%20de%20m%27indiquer%20vos%20disponibilit%C3%A9s." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Réserver ce soin</a>
                     </div>
                 </div>
             </div>
@@ -423,25 +419,25 @@
                     <svg class="w-6 h-6 text-[#1A2421] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="relative z-10 mt-4 sm:mt-0 text-center">
-                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Sports & Deep Tissue Massage</h2>
+                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Massage Sportif et Tissus Profonds</h2>
                     <div class="space-y-6 font-light text-base md:text-xl opacity-70 leading-relaxed text-[#1A2421]">
-                        <p>This massage combines deep techniques that work muscles and connective tissue to:</p>
+                        <p>Ce massage combine des techniques profondes travaillant les muscles et les tissus conjonctifs pour :</p>
                         <ul class="list-disc inline-block text-left pl-6 space-y-2">
-                            <li>relieve muscle tension</li>
-                            <li>reduce pain</li>
-                            <li>improve mobility</li>
-                            <li>prevent injuries and speed up recovery</li>
+                            <li>soulager les tensions musculaires</li>
+                            <li>réduire la douleur</li>
+                            <li>améliorer la mobilité</li>
+                            <li>prévenir les blessures et accélérer la récupération</li>
                         </ul>
-                        <p class="italic text-[#1A2421]/60">💡 Ideal for anyone looking to release tension and feel renewed.</p>
+                        <p class="italic text-[#1A2421]/60">💡 Idéal pour toute personne cherchant à relâcher les tensions et à se sentir revitalisée.</p>
                     </div>
 
                     <div class="mt-10 pt-8 border-t border-[#8B7E74]/10 flex flex-col items-center gap-2">
-                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Session</span>
+                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Séance</span>
                         <span class="serif text-3xl italic text-[#8B7E74]">60 Min — CHF 99.-</span>
                     </div>
 
                     <div class="mt-10 pt-8 flex justify-center">
-                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%27d%20like%20to%20book%20a%20Sports%20%26%20Deep%20Tissue%20Massage%20session.%20Please%20let%20me%20know%20your%20availability." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Book This Treatment</a>
+                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20Je%20souhaiterais%20r%C3%A9server%20un%20Massage%20Sportif.%20Merci%20de%20m%27indiquer%20vos%20disponibilit%C3%A9s." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Réserver ce soin</a>
                     </div>
                 </div>
             </div>
@@ -454,20 +450,20 @@
                     <svg class="w-6 h-6 text-[#1A2421] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="relative z-10 mt-4 sm:mt-0 text-center">
-                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Healing Touch</h2>
+                    <h2 class="serif text-4xl sm:text-5xl md:text-6xl mb-8 leading-tight">Toucher Guérisseur</h2>
                     <div class="space-y-6 font-light text-base md:text-xl opacity-70 leading-relaxed text-[#1A2421]">
-                        <p>A sensory experience that reconnects you deeply with your body.</p>
-                        <p>Through gentle touch, subtle fingertip strokes, craniosacral techniques, and therapeutic trigger points, the body begins to soften and release accumulated tension.</p>
-                        <p class="italic text-[#1A2421]/60">💡Mindful touch opens the heart, calms the nervous system, and reminds the body what it feels like to be touched with presence, care, and genuine warmth.</p>
+                        <p>Une expérience sensorielle qui vous reconnecte profondément avec votre corps.</p>
+                        <p>Par un toucher doux, des effleurages subtils, des techniques crânio-sacrées et des points de pression thérapeutiques, le corps commence à s'assouplir et à libérer les tensions accumulées.</p>
+                        <p class="italic text-[#1A2421]/60">💡 Le toucher conscient ouvre le cœur, calme le système nerveux et rappelle au corps ce que l'on ressent lorsqu'on est touché avec présence, bienveillance et une chaleur sincère.</p>
                     </div>
 
                     <div class="mt-10 pt-8 border-t border-[#8B7E74]/10 flex flex-col items-center gap-2">
-                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Session</span>
+                        <span class="text-[10px] uppercase tracking-[0.4em] opacity-40 font-medium">Séance</span>
                         <span class="serif text-3xl italic text-[#8B7E74]">60 Min — CHF 99.-</span>
                     </div>
 
                     <div class="mt-10 pt-8 flex justify-center">
-                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Hello%20Blanca%21%20I%27d%20like%20to%20book%20a%20Healing%20Touch%20session.%20Please%20let%20me%20know%20your%20availability." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Book This Treatment</a>
+                         <a href="https://api.whatsapp.com/send?phone=41772289355&text=Bonjour%20Blanca%21%20Je%20souhaiterais%20r%C3%A9server%20un%20Toucher%20Gu%C3%A9risseur.%20Merci%20de%20m%27indiquer%20vos%20disponibilit%C3%A9s." target="_blank" class="block sm:inline-block text-[11px] uppercase tracking-[0.3em] bg-[#1A2421] text-white px-10 py-5 rounded-full hover:bg-[#4A5D4E] transition-all">Réserver ce soin</a>
                     </div>
                 </div>
             </div>
@@ -475,7 +471,6 @@
     </div>
 
     <script>
-        // Forzar scroll al inicio al cargar/actualizar la página
         if (history.scrollRestoration) history.scrollRestoration = 'manual';
         window.scrollTo(0, 0);
 
