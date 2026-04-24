@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="https://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://massage-sense.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://massage-sense.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://massage-sense.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massage-sense.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://massage-sense.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massage-sense.com/"/>
+  </url>
+
+  <url>
+    <loc>https://massage-sense.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://massage-sense.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://massage-sense.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massage-sense.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://massage-sense.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massage-sense.com/"/>
+  </url>
+
+  <url>
+    <loc>https://massage-sense.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://massage-sense.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://massage-sense.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massage-sense.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://massage-sense.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massage-sense.com/"/>
+  </url>
+
+  <url>
+    <loc>https://massage-sense.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://massage-sense.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://massage-sense.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massage-sense.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://massage-sense.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massage-sense.com/"/>
+  </url>
+
+</urlset>
